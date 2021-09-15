@@ -24,8 +24,8 @@ sed -i "s/==PUBSUB_PORT==/$PUBSUB_PORT/" $PUBSUB_COMPOSEFILE
 
 docker network create $NETWORK_NAME
 
-cd $TARGET_DIR/$PROJECT_NAME/db && docker-compose up docker-compose.yml -d
-cd $TARGET_DIR/$PROJECT_NAME/pubsub && docker-compose up docker-compose.yml -d
+cd $TARGET_DIR/$PROJECT_NAME/db && docker-compose up -d
+cd $TARGET_DIR/$PROJECT_NAME/pubsub && docker-compose up -d
 
 
 
