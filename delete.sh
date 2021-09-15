@@ -9,5 +9,5 @@ docker stop $PROJECT_NAME-redis
 docker rm $PROJECT_NAME-redis
 docker network rm $NETWORK_NAME
 
-rm -rf $TARGET_DIR/$PROJECT_NAME
+sudo rm -rf $TARGET_DIR/$PROJECT_NAME
 
