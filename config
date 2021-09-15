@@ -1,0 +1,12 @@
+TARGET_DIR="/home/kb-dkr/dev"
+PROJECT_NAME="project-name"
+
+DB_PORT="3306"
+DB_USER="user"
+DB_PASSWORD="passwd"
+DB_NAME="dbname"
+
+PUBSUB_PORT="5555"
+PUBSUB_PASSWORD="passwd"
+
+NETWORK_NAME="network-name"

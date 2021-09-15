@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ==PROJECT_NAME==-postgres:
+    image: postgres
+    container_name: ==PROJECT_NAME==-postgres
+    restart: always
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
+    ports:
+      - ==DB_PORT==:5432
+    environment:
+      POSTGRES_DB: "==DB_NAME=="
+      POSTGRES_USER: "==DB_USER=="
+      POSTGRES_PASSWORD: "==DB_PASSWORD=="
+      TZ: "Asia/Seoul"
+networks:
+  default:
+    external:
+      name: ==NETWORK_NAME==

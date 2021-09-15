@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+    ==PROJECT_NAME==-redis:
+      image: redis:6.2.4
+      command: redis-server --requirepass ==PUBSUB_PASSWORD== --port 12345
+      container_name: ==PROJECT_NAME==-redis
+      hostname: ==PROJECT_NAME==-redis
+      labels:
+        - "name=redis"
+        - "mode=standalone"
+      ports:
+        - ==PUBSUB_PORT==:12345
+networks:
+    default:
+      external:
+        name: ==NETWORK_NAME==
